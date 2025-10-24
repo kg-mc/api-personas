@@ -28,3 +28,11 @@ def get_for_dni(request, dni):
     except Persona.DoesNotExist:
         raise  Http404("Persona no encontrada")
     return render(request, 'personas/dni.html', {'persona': persona})
+
+def resultados(request):
+    apellido_paterno = request.POST['apellido_paterno']
+    personas = Persona.objects.filter(apellido_paterno=apellido_paterno)
+    #return HttpResponse(f"Resultados de la búsqueda para apellido paterno: {apellido_paterno}")
+    if personas is None:
+        raise Http404("No se encontraron personas con los datos proporcionados.")
+    return render(request, 'personas/resultados.html', {'personas': personas})

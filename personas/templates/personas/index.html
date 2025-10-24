@@ -1,4 +1,4 @@
-{% if personas_reniec %}
+{% comment %} {% if personas_reniec %}
 <h1>Listado de Personas RENIEC</h1>
 {% for persona in personas_reniec %}
 <div>
@@ -9,4 +9,34 @@
 </div>
 {% endfor %} {% else %}
 <p>Sin registros de personas en la base de datos</p>
-{% endif %}
+{% endif %} {% endcomment %}
+
+<form action="{% url 'personas:resultados' %}" method="POST">
+  {% csrf_token %}
+  <fieldset>
+    <legend><h1>Buscador de personas</h1></legend>
+    <label for="nombres">Nombres de persona</label><br />
+    <input
+      type="text"
+      name="nombres"
+      id="nombres"
+      placeholder="Edwin Antonio"
+    />
+    <br/>
+    <label for="apellidos_paterno">Apellido paterno</label><br />
+    <input
+      type="text"
+      name="apellido_paterno"
+      id="apellido_paterno"
+      placeholder="Hinojosa"
+    /><br/>
+    <label for="apellido_materno">Apellido materno</label><br />
+    <input
+      type="text"
+      name="apellido_materno"
+      id="apellido_materno"
+      placeholder="Ramos"
+    />
+  </fieldset>
+  <input type="submit" value="Buscar" />
+</form>
