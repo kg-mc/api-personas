@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalle de Persona</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="mb-4">Detalle de Persona</h1>
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">{{ persona.nombre }}</h2>
+          <p>{{persona.apellido_paterno}} {{persona.apellido_materno}}</p>
+          <p class="card-text"><strong>DNI:</strong> {{ persona.dni }}</p>
+          <p class="card-text">
+            <strong>Fecha de Nacimiento:</strong> {{ persona.fecha_nacimiento }}
+          </p>
+          <p class="card-text">
+            <strong>Dirección:</strong> {{ persona.direccion }}
+          </p>
+          <p>
+            <strong>ubigeo</strong> {{}}
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

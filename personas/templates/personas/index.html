@@ -1,0 +1,12 @@
+{% if personas_reniec %}
+<h1>Listado de Personas RENIEC</h1>
+{% for persona in personas_reniec %}
+<div>
+  <h2>{{ persona.nombre }}</h2>
+  <p>DNI: {{ persona.dni }}</p>
+  <p>Fecha de Nacimiento: {{ persona.fecha_nacimiento }}</p>
+  <p>Dirección: {{ persona.direccion }}</p>
+</div>
+{% endfor %} {% else %}
+<p>Sin registros de personas en la base de datos</p>
+{% endif %}

@@ -1,0 +1,13 @@
+manage.pyUna utilidad de línea de comandos que te permite interactuar con este proyecto de Django de diversas maneras. Puedes leer todos los detalles manage.pyen django-admin y manage.py .
+
+mysite/: Un directorio que contiene el paquete de Python de tu proyecto. Su nombre es el nombre del paquete de Python que necesitarás para importar cualquier cosa dentro de él (por ejemplo, mysite.urls).
+
+mysite/__init__.pyUn archivo vacío que indica a Python que este directorio debe considerarse un paquete. Si eres principiante en Python, lee más sobre paquetes en la documentación oficial de Python.
+
+mysite/settings.pyConfiguración de este proyecto de Django. La configuración de Django te explicará todo sobre su funcionamiento.
+
+mysite/urls.pyLas declaraciones de URL para este proyecto de Django; una tabla de contenido de su sitio web con Django. Puede leer más sobre las URL en el despachador de URL .
+
+mysite/asgi.pyUn punto de entrada para servidores web compatibles con ASGI que atiendan su proyecto. Consulte " Cómo implementar con ASGI" para obtener más información.
+
+mysite/wsgi.pyUn punto de entrada para servidores web compatibles con WSGI que sirvan a su proyecto. Consulte " Cómo implementar con WSGI" para obtener más información.
